@@ -18,7 +18,6 @@ angular.module('coveomobile', ['ionic', 'coveomobile.controllers', 'coveomobile.
                 url: "/tab",
                 abstract: true,
                 templateUrl: "templates/tabs.html",
-                controller: 'WorkgroupCtrl'
             })
 
             .state('tab.sources', {
