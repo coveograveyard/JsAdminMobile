@@ -1,0 +1,17 @@
+<ion-modal-view view-title="Current organization">
+    <ion-header-bar class="bar-coveo">
+        <h1 class="title title-white">Choose an organization</h1>
+        <div class="buttons">
+            <button class="button button-clear close-button" ng-click="hideWorkgroupModal()">Close</button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <ion-refresher pulling-text="Pull to refresh..." on-refresh="doRefresh()"></ion-refresher>
+        <div class="item item-divider">Number of organizations : {{workgroups.length}}</div>
+        <ion-radio class="item item-icon-left item-icon-right" ng-repeat="workgroup in workgroups" ng-value="workgroup.id"
+                   ng-model="actualWorkgroup" ng-click="setCurrentWorkgroup('{{workgroup.id}}')">
+            <i class="icon ion-briefcase"></i>
+            <span class="indent-radio">{{workgroup.displayName}}</span>
+        </ion-radio>
+    </ion-content>
+</ion-modal-view>

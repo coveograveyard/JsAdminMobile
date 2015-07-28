@@ -1,0 +1,28 @@
+<ion-view view-title="{{server.agentId}}">
+    <ion-content class="padding">
+        <div class="list card">
+            <div class="item item-icon-left">
+                <i class="icon {{server.platformIcon}}"></i>
+
+                <h2>Name : {{server.agentId}}</h2>
+
+                <p>ID : {{server.id}}</p>
+            </div>
+            <div class="item item-body">
+                <p>
+
+                <h2>Private DNS</h2>{{server.privateDNS}}</p>
+                <p>
+
+                <h2>Launch time</h2>{{server.launchTime}}</p>
+                <p>
+
+                <h2>Instance type</h2>{{server.instanceType}}</p>
+                <p>
+
+                <h2>Instance state</h2>
+                <i class="icon-left {{server.stateIcon}}"></i>{{server.instanceState}}</p>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

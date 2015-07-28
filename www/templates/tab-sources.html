@@ -1,0 +1,29 @@
+<ion-view view-title="Sources">
+    <ion-content>
+        <ion-refresher pulling-text="Pull to refresh..." on-refresh="doRefresh()"></ion-refresher>
+        <ion-list>
+            <ion-item class="item item-divider">
+                Number of sources : {{sources.length}}
+            </ion-item>
+            <ion-item class="item item-avatar item-icon-left item-icon-right" ng-repeat="source in sources" type="item-text-wrap"
+                      href="#/tab/sources/{{source.id}}">
+                <div class="row">
+                    <div class="col">
+                        <i class="icon {{source.sourceIcon}}"></i>
+
+                        <h2>{{source.type}}</h2>
+
+                        <p style="display:inline;">{{source.sourceVisibility}}</p>
+                        <i class="icon-left {{source.visibilityIcon}}"></i>
+                    </div>
+                    <div class="col">
+                        <h2>{{source.name}}</h2>
+                    </div>
+                    <i class="icon ion-chevron-right icon-accessory"></i>
+                    <ion-option-button class="button-royal" ng-click="refresh(source.id)">Refresh</ion-option-button>
+                    <ion-option-button class="button-positive" ng-click="rebuild(source.id)">Rebuild</ion-option-button>
+                </div>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

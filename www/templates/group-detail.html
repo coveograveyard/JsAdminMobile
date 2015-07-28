@@ -1,0 +1,46 @@
+<ion-view view-title="{{groupDetail.displayName}}">
+    <ion-content class="padding">
+        <ion-refresher pulling-text="Pull to refresh..." on-refresh="doRefresh()"></ion-refresher>
+
+        <button class="button button-full button-positive" ng-click="showInvite()">
+            Add member
+        </button>
+
+        <div class="list card">
+            <div class="item item-icon-left">
+                <i class="icon ion-person-stalker"></i>
+
+                <h2>Group name : {{groupDetail.displayName}}</h2>
+
+                <p>ID : {{groupDetail.id}}</p>
+            </div>
+        </div>
+
+        <div class="list card">
+            <div class="item item-divider">Members</div>
+            <div class="item item-icon-left" ng-repeat="user in groupDetail.users">
+                <i class="icon ion-person {{user.class}}"></i>
+
+                <h2>{{user.email}}</h2>
+                {{user.displayName}}
+            </div>
+        </div>
+
+        <div class="list card">
+            <div class="item item-divider">Permissions</div>
+            <div class="item item-icon-left" ng-repeat="permission in groupDetail.permissions">
+                <i class="icon ion-lock-combination"></i>
+
+                <h2>Domain : {{permission.name}}</h2>
+
+                <p>
+                    Owner : {{permission.owner}}
+                </p>
+
+                <p>
+                    Permissions : {{permission.types}}
+                </p>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

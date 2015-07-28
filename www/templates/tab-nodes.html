@@ -1,0 +1,28 @@
+<ion-view view-title="Nodes">
+    <ion-content>
+        <ion-refresher pulling-text="Pull to refresh..." on-refresh="doRefresh()"></ion-refresher>
+        <ion-list ng-repeat="(key, val) in nodes">
+            <ion-item class="item item-divider">
+                {{key}} : {{val.length}} nodes
+            </ion-item>
+            <ion-item class="item item-icon-left" ng-repeat="node in val" type="item-text-wrap"
+            ">
+            <i class="icon {{node.typeIcon}}"></i>
+
+            <div class="row">
+                <div class="col">
+                    <h2>{{node.name}}</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    {{node.instanceType.split('.')[0]}}
+                </div>
+                <div class="col">
+                    <i class="icon-left {{node.stateIcon}}"></i> {{node.status.status}}
+                </div>
+            </div>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,22 @@
+<ion-modal-view view-title="Add a member">
+    <ion-header-bar class="bar-coveo">
+        <h1 class="title title-white">Add a member</h1>
+
+        <div class="buttons">
+            <button class="button button-clear close-button" ng-click="closeInvite()">Close</button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <form ng-submit="invite(user)">
+            <div class="list">
+                <label class="item item-input">
+                    <span class="input-label">Email</span>
+                    <input type="text" style="text-align:right;" ng-model="user">
+                </label>
+                <label class="item">
+                    <button class="button button-block button-positive" type="submit">Invite</button>
+                </label>
+            </div>
+        </form>
+    </ion-content>
+</ion-modal-view>

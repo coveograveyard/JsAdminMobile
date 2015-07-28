@@ -1,0 +1,37 @@
+<ion-view view-title="Servers">
+    <ion-content>
+        <ion-refresher pulling-text="Pull to refresh..." on-refresh="doRefresh()"></ion-refresher>
+        <ion-list>
+            <ion-item class="item item-divider">
+                Number of servers : {{servers.length}}
+            </ion-item>
+            <ion-item class="item item-avatar item-icon-left item-icon-right" ng-repeat="server in servers" type="item-text-wrap"
+                      href="#/tab/servers/{{server.id}}">
+                <i class="icon {{server.platformIcon}}"></i>
+
+                <div class="row">
+                    <div class="col">
+                        <h2>{{server.workgroup}}</h2>
+                    </div>
+                    <div class="col">
+                        ({{server.agentId}})
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        {{server.instanceType}}
+                    </div>
+                    <div class="col">
+                        <i class="icon-left ion-record {{server.stateIcon}}"></i>
+                        {{server.instanceState}}
+                    </div>
+                </div>
+                <i class="icon ion-chevron-right icon-accessory"></i>
+                <ion-option-button class="button-balanced" ng-show="server.instanceState == 'stopped'" ng-click="start(server.id)">Start
+                </ion-option-button>
+                <ion-option-button class="button-assertive" ng-show="server.instanceState == 'running'" ng-click="stop(server.id)">Stop
+                </ion-option-button>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

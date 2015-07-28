@@ -1,0 +1,61 @@
+/* Empty. Add your own CSS if you like */
+.custom-icon {
+    border: none;
+    color: white !important;
+}
+
+.icon-red {
+    color: red;
+}
+
+.title {
+    color: white;
+}
+
+.icon-green {
+    color: green;
+}
+
+.icon-yellow {
+    color: yellow;
+}
+
+.ion-record {
+    position: relative;
+    top: 1px;
+}
+
+.bar .button.button-clear {
+    color: #b2b2b2;
+}
+
+.nav-bar-block .button.button-clear {
+    color: white;
+}
+
+.close-button, .title-white {
+    color: white !important;
+}
+
+.bar.bar-coveo {
+    border-color: black;
+    background-color: #f57f03;
+    background-image: linear-gradient(0deg, #f57f03, #f57f03 50%, transparent 50%);
+    color: #fff;
+}
+
+.button {
+    background-color: #f57f03;
+}
+
+.invited, .version-nbr {
+    color: #CCCCCC;
+}
+
+.indent-radio {
+    padding-left: 40px;
+}
+
+.group-view .item-complex.item-icon-right .item-content {
+    padding-right: 34px;
+}

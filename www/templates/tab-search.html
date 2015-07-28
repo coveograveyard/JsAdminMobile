@@ -1,0 +1,32 @@
+<ion-view view-title="Search">
+    <ion-content>
+        <div class="bar bar-header item-input-inset">
+            <label class="item-input-wrapper">
+                <i class="icon ion-ios-search placeholder-icon"></i>
+                <input type="search" ng-model="searchTerm.text" placeholder="Search">
+            </label>
+            <button class="button button-clear" ng-click="doRefresh()">
+                Go!
+            </button>
+        </div>
+        <ion-list>
+            <ion-item class="item item-divider" ng-show="results != null">
+                Top {{results.results.length}} results shown out of {{results.totalCount}}
+            </ion-item>
+            <ion-item class="item item-icon-left" ng-repeat="result in results.results" type="item-text-wrap">
+                <i class="icon {{result.typeIcon}}"></i>
+
+                <div class="col">
+                    <div class="row">
+                        <a href="{{result.clickUri}}" target="_blank">
+                            <h2>{{result.title}}</h2>
+                        </a>
+                    </div>
+                    <div class="row">
+                        <p>Source type : {{result.raw.sourcetype}}</p>
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

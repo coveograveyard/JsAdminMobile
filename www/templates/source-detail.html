@@ -1,0 +1,26 @@
+<ion-view view-title="{{source.name}}">
+    <ion-content class="padding">
+        <div class="list card">
+            <div class="item item-icon-left">
+                <i class="icon {{source.sourceIcon}}"></i>
+
+                <h2>Status : {{source.status}}</h2>
+
+                <p>{{source.statusStamp}}</p>
+            </div>
+        </div>
+        <div class="list card">
+            <div class="item item-divider">Activity</div>
+            <div class="item item-icon-left" ng-repeat="activity in activities">
+                <i class="icon {{activity.operationIcon}}"></i>
+
+                <h2>Operation : {{activity.operation}}</h2>
+
+                <p ng-show="activity.triggeredBy.displayName">Triggered by : {{activity.triggeredBy.displayName}}</p>
+
+                <p>{{activity.date}}
+                    <i class="icon-left ion-record {{activity.stateIcon}}"></i> {{activity.state}}</p>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

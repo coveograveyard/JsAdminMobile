@@ -1,0 +1,26 @@
+<ion-view view-title="Groups" class="group-view">
+    <ion-content>
+        <ion-refresher pulling-text="Pull to refresh..." on-refresh="doRefresh()"></ion-refresher>
+        <ion-list>
+            <ion-item class="item item-divider">
+                Number of groups : {{groups.length}}
+            </ion-item>
+            <ion-item class="item item-avatar item-icon-left item-icon-right" ng-repeat="group in groups" type="item-text-wrap"
+                      href="#/tab/groups/{{group.id}}">
+                <div class="row">
+                    <div class="col">
+                        <i class="icon ion-person-stalker"></i>
+
+                        <h2>{{group.displayName}}</h2>
+
+                        <p>Domains : {{group.realmNbr}}</p>
+                    </div>
+                    <div class="col">Members : {{group.userNbr}}
+                        <p>Permissions : {{group.permissionNbr}}</p>
+                    </div>
+                </div>
+                <i class="icon ion-chevron-right icon-accessory"></i>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
