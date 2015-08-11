@@ -6,7 +6,7 @@ Available here : [m.cloud.coveo.com](https://m.cloud.coveo.com)
 **JsAdminMobile** allows mobile users to view most of the content available on Coveo's JsAdmin console. 
 
 #### Screenshots
-![Screenshots](./screenshot.png)
+![Screenshots](https://raw.githubusercontent.com/Coveo/JsAdminMobile/master/screenshot.png)
 ##### [More screenshots here](https://drive.google.com/folderview?id=0B2rBrydxhUyhflBXYUNIdEltMzVYV1FiTlhjVE4tV3RZeGU2dzRDcThCYnBJU25SQ21LSE0&usp=sharing)
 #
 #
