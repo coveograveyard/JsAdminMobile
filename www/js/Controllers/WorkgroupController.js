@@ -1,5 +1,5 @@
 angular.module('coveomobile.controllers').controller('WorkgroupCtrl', function ($scope, $ionicModal, $ionicPopup, $ionicLoading, $http, Workgroups, Token) {
-    $ionicModal.fromTemplateUrl('templates/tab-workgroups.html', {scope: $scope}).then(function (modal) {
+    $ionicModal.fromTemplateUrl('templates/tab-workgroups.html', {scope: $scope, hardwareBackButtonClose: false, backdropClickToClose: false}).then(function (modal) {
         $scope.workgroupModal = modal;
     });
 

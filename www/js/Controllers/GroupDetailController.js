@@ -1,5 +1,8 @@
 angular.module('coveomobile.controllers')
     .controller('GroupDetailCtrl', function ($scope, $stateParams, $ionicPopup, $ionicModal, $ionicLoading, $http, GroupDetail) {
+        
+        $scope.groupId = toTitle($stateParams.ID.replace(actualWorkgroup, '').split('-')[1]);
+        
         $ionicModal.fromTemplateUrl('templates/member-invite.html', {scope: $scope}).then(function (modal) {
             $scope.inviteModal = modal;
         });
