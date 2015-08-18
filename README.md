@@ -30,3 +30,12 @@ This app is a static website, so cloning it and accessing to the _index.html_ fi
 
 #### Contributors
 * [Simon Lacoursière](https://github.com/lacoursieresimon)
+
+
+#### Nice to have features
+The following features are things that would be nice to have someday
+* Versionning during the Jenkins task so that the Amazon S3 cache invalidates itself
+* Minify the code to help with loading times
+* Allow the "Accept invite to organization" feature
+* Allow the creation of new organizations
+* Integrate TypeScript
